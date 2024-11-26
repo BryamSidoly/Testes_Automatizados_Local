@@ -125,3 +125,5 @@ log_area.insert(tk.END, "Clique em Inciar Gravação...\n")
 log_area.see(tk.END)
 
 root.mainloop()
+
+#I HATE PYTHON (⌐■_■)
