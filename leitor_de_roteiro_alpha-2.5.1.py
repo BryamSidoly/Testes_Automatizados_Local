@@ -126,7 +126,7 @@ def deselect_all():
 def filter_steps(event=None):
     filter_text = entry_filter.get().lower()
     for i, widget in enumerate(frame_steps.winfo_children()):
-        step_text = widget.cget("text").lower()  # Acessando o texto real do passo
+        step_text = widget.cget("text").lower()
         if filter_text in step_text:
             widget.grid(row=i, column=0)
         else:
@@ -165,7 +165,7 @@ entry_filter.bind("<KeyRelease>", filter_steps)
 frame_steps = tk.Frame(root)
 frame_steps.grid(row=4, column=0, sticky="nsew")
 
-# Botões de seleção - Definindo os botões antes de usá-los
+# Botões de seleção
 btn_select_all = tk.Button(root, text="Selecionar Todos", command=select_all)
 btn_select_all.grid(row=5, column=0, pady=5)
 
