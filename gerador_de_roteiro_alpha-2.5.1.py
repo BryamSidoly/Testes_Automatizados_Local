@@ -12,7 +12,7 @@ def capture_interaction(event_type, element_info):
     interaction = f"{event_type}: {element_info}"
     interactions.append(interaction)
     log_area.insert(tk.END, interaction + "\n")
-    log_area.see(tk.END)  # Rolagem automática para o final
+    log_area.see(tk.END) 
 
 def monitor_interactions():
     global is_recording
@@ -87,10 +87,10 @@ def save_file():
     file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
 
     if file_path: 
-        url = url_entry.get()  # Pega o URL do campo
+        url = url_entry.get()  
         with open(file_path, "w") as file:
-            file.write(f"Link: {url}\n")  # Escreve o link no início do arquivo
-            file.write("\n".join(interactions))  # Salva as interações depois do link
+            file.write(f"Link: {url}\n") 
+            file.write("\n".join(interactions))
         log_area.insert(tk.END, f"Interações salvas em {file_path}\n")
         log_area.see(tk.END)
     
